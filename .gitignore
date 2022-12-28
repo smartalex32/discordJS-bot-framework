@@ -1,0 +1,12 @@
+# Ignoring node_modules folder
+node_modules
+
+# Ignoring token config file
+# Uncomment the line below once you have tokens stored
+# config.json
+
+# Ignore test data
+/test
+
+# Database
+database.sqlite

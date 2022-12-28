@@ -1,0 +1,25 @@
+{
+  "name": "discordjs-bot-framework",
+  "version": "0.0.0",
+  "description": "This is a framework discord.js bot that can be used as a starting point for other bots",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smartalex32/discordJS-bot-framework.git"
+  },
+  "author": "Alex Johnson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/smartalex32/discordJS-bot-framework/issues"
+  },
+  "homepage": "https://github.com/smartalex32/discordJS-bot-framework#readme",
+  "dependencies": {
+    "discord.js": "^14.7.1",
+    "sequelize": "^6.28.0",
+    "sqlite3": "^5.1.4"
+  }
+}
