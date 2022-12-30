@@ -1,5 +1,6 @@
 {
     "token": "This is where the Discord Bot Token goes",
     "clientid": "This is where the client ID goes",
+    "api_key": "Simple place to put API keys",
     "invite_link": "This is a simple place to keep the invite link for your bot if you choose to make it private"
 }

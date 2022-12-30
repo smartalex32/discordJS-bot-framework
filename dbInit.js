@@ -1,18 +1,14 @@
-const Sequelize = require('sequelize');
+const { db } = require('./dbObjects');
 
-const sequelize = new Sequelize('database', 'username', 'password', {
-	host: 'localhost',
-	dialect: 'sqlite',
-	logging: false,
-	storage: 'database.sqlite',
-});
-
-// require('./data/models/User.js')(sequelize, Sequelize.DataTypes);
-
+// If you need to override the DB, then include {force} in the sync() call
+let syncOptions = {};
 const force = process.argv.includes('--force') || process.argv.includes('-f');
+if (force) syncOptions.force = true;
+else {
+	syncOptions.force = false;
+	syncOptions.alter = true;
+}
 
-// For testing it will overwrite the DB
-// sequelize.sync({ force }).then(async () => {
-sequelize.sync().then(async () => {
-	console.log('Database synced');
-}).catch(console.error);
+db.sync(syncOptions)
+	.then(async () => console.log('Database synced'))
+	.catch(err => console.error('Error creating tables:', err));
